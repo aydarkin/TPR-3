@@ -52,7 +52,6 @@ namespace TPR_3
                 column.HeaderText = "y" + Convert.ToString(i + 1);
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
                 column.CellTemplate = new DataGridViewTextBoxCell();
-                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
 
                 payGrid.Columns.Add(column);
             }
@@ -187,7 +186,7 @@ namespace TPR_3
 
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
                 column.CellTemplate = new DataGridViewTextBoxCell();
-                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+                column.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
 
                 iterGrid.Columns.Add(column);
             }
@@ -398,6 +397,11 @@ namespace TPR_3
 
                     sw.WriteLine(firstStartStrategy);
                     sw.WriteLine(secondStartStrategy);
+
+                    sw.WriteLine(rbIteration.Checked ? "1" : "0");
+
+                    sw.WriteLine(nudIterations.Value);
+                    sw.WriteLine(nudPrecision.Value);
                 }
             }
         }
@@ -429,6 +433,15 @@ namespace TPR_3
 
                     nudStart1.Value = firstStartStrategy;
                     nudStart2.Value = secondStartStrategy;
+
+                    // 1 - итерации, 0 - точность
+                    var isIteration = sr.ReadLine() == "1";
+
+                    rbIteration.Checked = isIteration;
+                    rbPrecision.Checked = !isIteration;
+                   
+                    nudIterations.Value = Convert.ToDecimal(sr.ReadLine());
+                    nudPrecision.Value = Convert.ToDecimal(sr.ReadLine());
                 }
             }
         }

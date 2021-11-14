@@ -445,16 +445,15 @@
             // 
             this.iterGrid.AllowUserToAddRows = false;
             this.iterGrid.AllowUserToDeleteRows = false;
+            this.iterGrid.AllowUserToOrderColumns = true;
             this.iterGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.iterGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.iterGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.iterGrid.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.iterGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.iterGrid.Location = new System.Drawing.Point(12, 359);
             this.iterGrid.MultiSelect = false;
             this.iterGrid.Name = "iterGrid";
+            this.iterGrid.ReadOnly = true;
             this.iterGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.iterGrid.Size = new System.Drawing.Size(821, 211);
             this.iterGrid.TabIndex = 42;
