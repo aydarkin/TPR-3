@@ -394,7 +394,10 @@ namespace TPR_3
                         {
                             sw.WriteLine(payGrid.Rows[i].Cells[j].Value);
                         }
-                    }                   
+                    }
+
+                    sw.WriteLine(firstStartStrategy);
+                    sw.WriteLine(secondStartStrategy);
                 }
             }
         }
@@ -420,6 +423,12 @@ namespace TPR_3
                             payGrid.Rows[i].Cells[j].Value = Convert.ToDouble(sr.ReadLine());
                         }
                     }
+
+                    firstStartStrategy = Convert.ToInt32(sr.ReadLine());
+                    secondStartStrategy = Convert.ToInt32(sr.ReadLine());
+
+                    nudStart1.Value = firstStartStrategy;
+                    nudStart2.Value = secondStartStrategy;
                 }
             }
         }
